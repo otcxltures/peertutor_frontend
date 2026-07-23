@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #FAF7F2;
+  --color-ink: #1C1B1F;
+  --color-muted: #6E6B67;
+  --color-navy: #2B3A5C;
+  --color-navyDark: #1E2A45;
+  --color-amber: #E3A62F;
+  --color-amberDark: #B9820F;
+  --color-line: #E4DFD6;
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1C1B1F;
+  font-family: "Inter", sans-serif;
+}
+
+.font-display {
+  font-family: "Fraunces", serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.tag-note {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  background-color: #FCE9BE;
+  color: #6B4A0E;
+  border-radius: 3px;
+  transform: rotate(-1deg);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.tag-note:nth-of-type(2n) {
+  transform: rotate(0.8deg);
+  background-color: #F5E4CE;
+}
+
+:focus-visible {
+  outline: 2px solid #2B3A5C;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
