@@ -6,6 +6,7 @@ import TutorBrowse from "./pages/TutorBrowse";
 import Dashboard from "./pages/Dashboard";
 import TutorProfileEdit from "./pages/TutorProfileEdit";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Home from "./pages/Home";
 
 export default function App() {
   const { user } = useAuth();
@@ -38,7 +39,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-      <Route path="/" element={<Navigate to={user ? "/dashboard" : "/login"} replace />} />
+    <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <Home />} /> 
     </Routes>
   );
 }
